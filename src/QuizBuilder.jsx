@@ -1,12 +1,13 @@
 // CreateTest.js
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, Outlet, Route } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import CreateQuestion from './CreateQuestion';
+import './index.css'
 
-const QuizBuilder = () => {
+const QuizBuilder = ({setActivePage}) => {
   const navigate = useNavigate();
   const [testInfo, setTestInfo] = useState({
     testName: '',
@@ -27,7 +28,8 @@ const QuizBuilder = () => {
     console.log('Questions:', questions);
 
     // Redirect to the question creation page
-    navigate(`create-question/${currentQuestionId}`);
+    
+    navigate(`create-question/${currentQuestionId}`, {state:{testName:`${testInfo.testName}`}});
   };
 
   const handleReset = () => {
@@ -36,7 +38,7 @@ const QuizBuilder = () => {
 
   return (
     <div className="m-8">
-      <h1 className="text-3xl font-semibold mb-4">Trình tạo bài kiểm tra</h1>
+      <h1 className="text-3xl font-semibold mb-4">Tạo bài kiểm tra</h1>
       <hr className="my-4" />
       
       <form>
@@ -83,14 +85,14 @@ const QuizBuilder = () => {
           <button
             type="button"
             onClick={handleCreateTest}
-            className="bg-blue-500 text-white px-4 py-2 rounded-md mr-2"
+            className="bg-sidebarcolor text-white px-4 py-2 rounded-md mr-2 hover:bg-gray-500"
           >
             Tạo
           </button>
           <button
             type="button"
             onClick={handleReset}
-            className="bg-gray-500 text-white px-4 py-2 rounded-md"
+            className="bg-white text-textdark px-3.5 py-1.5 rounded-md border-2 border-textdark hover:bg-gray-500"
           >
             Xóa
           </button>

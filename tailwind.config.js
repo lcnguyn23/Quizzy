@@ -8,7 +8,7 @@ export default {
     extend: {
       colors: {
         bgcolor: "#FFFFFF",
-        btncolor: "#OF121E",
+        btndark: "#OF121E",
         sidebarcolor: "#111727",
         textlight: "#EFF4F8",
         textdark: "#313131",
