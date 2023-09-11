@@ -11,12 +11,12 @@ const QuizDetail = () => {
       testName: 'Bài kiểm tra 1',
       questions: [
         {
-          content: 'Nội dung câu hỏi 1',
-          options: ['Lựa chọn 1', 'Lựa chọn 2', 'Lựa chọn 3', 'Lựa chọn 4'],
+          content: 'Đâu là quốc gia lớn nhất thế giới dựa trên diện tích?',
+          options: ['Nga', 'Hoa Kỳ', 'Trung Quốc', 'Ấn Độ'],
         },
         {
-          content: 'Nội dung câu hỏi 2',
-          options: ['Lựa chọn 1', 'Lựa chọn 2', 'Lựa chọn 3', 'Lựa chọn 4'],
+          content: 'Dãy núi nào là dãy núi cao nhất trên thế giới?',
+          options: ['Dãy núi Rocky', 'Dãy núi Andes', 'Dãy núi Alps', 'Dãy núi Himalaya'],
         },
         // ...
       ],
@@ -26,14 +26,18 @@ const QuizDetail = () => {
       testName: 'Bài kiểm tra 2',
       questions: [
         {
-          content: 'Nội dung câu hỏi 1',
-          options: ['Lựa chọn 1', 'Lựa chọn 2', 'Lựa chọn 3', 'Lựa chọn 4'],
+          content: 'Thủ đô của nước Nga là gì?',
+          options: ['Saint Petersburg', 'Kazan', 'Moscow', 'Novosibirsk'],
         },
         {
-          content: 'Nội dung câu hỏi 2',
-          options: ['Lựa chọn 1', 'Lựa chọn 2', 'Lựa chọn 3', 'Lựa chọn 4'],
+          content: 'Sông nào dài nhất trên thế giới?',
+          options: ['Sông Nile', 'Sông Amazon', 'Sông Mississippi', 'Sông Yangtze'],
         },
-        // ...
+        {
+          content: 'Quốc gia nào nằm ở cực Nam của thế giới?',
+          options: ['Anh', 'Nam Cực', 'Argentina', 'Úc'],
+        },
+        
       ],
     },
     // Thêm các bài kiểm tra khác tại đây

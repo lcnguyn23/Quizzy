@@ -7,14 +7,14 @@ const MyQuiz = () => {
     {
       id: 1,
       testName: 'Bài kiểm tra số 1',
-      numQuestions: 5,
-      createdAt: '2023-09-11',
+      numQuestions: 2,
+      createdAt: '2023-08-22',
     },
     {
       id: 2,
       testName: 'Bài kiểm tra số 2',
-      numQuestions: 5,
-      createdAt: '2023-09-12',
+      numQuestions: 3,
+      createdAt: '2023-08-23',
     },
   ]);
 

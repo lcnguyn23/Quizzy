@@ -1,5 +1,4 @@
 import './App.css';
-import { useState } from 'react';
 import { BrowserRouter as Router, Navigate, Route } from "react-router-dom";
 import Sidebar from './sidebar.jsx'
 import QuizBuilder from './QuizBuilder.jsx'
