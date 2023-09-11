@@ -9,21 +9,37 @@ import ErrorPage from './error-page';
 import QuizBuilder from './QuizBuilder';
 import CreateQuestion from './CreateQuestion';
 import './index.css';
+import MyQuiz from './MyQuiz';
+import QuizDetail from './QuizDetail';
+import Home from './Home';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Sidebar />,
     errorElement: <ErrorPage />,
+    redirect: <Home />,
     children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
       {
         path: "/quiz-builder",
         element: <QuizBuilder />,
       },
       {
-        path: "/quiz-builder/create-question/:currentQuestionId",
+        path: "/quiz-builder/create-question",
         element: <CreateQuestion />,
       },
+      {
+        path: "/my-quiz",
+        element: <MyQuiz/>
+      },
+      {
+        path: "/my-quiz/quiz-detail/:quizId",
+        element: <QuizDetail/>
+      }
     ],
   },
   

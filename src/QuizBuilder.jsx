@@ -1,10 +1,8 @@
 // CreateTest.js
-import React, { useEffect, useState } from 'react';
-import { Link, Outlet, Route } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Outlet} from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
-import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
-import CreateQuestion from './CreateQuestion';
 import './index.css'
 
 const QuizBuilder = ({setActivePage}) => {
@@ -15,7 +13,6 @@ const QuizBuilder = ({setActivePage}) => {
     numQuestions: 0,
   });
   const [questions, setQuestions] = useState([]);
-  const [currentQuestionId, setCurrentQuestionId] = useState(1); 
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -29,7 +26,8 @@ const QuizBuilder = ({setActivePage}) => {
 
     // Redirect to the question creation page
     
-    navigate(`create-question/${currentQuestionId}`, {state:{testName:`${testInfo.testName}`}});
+    
+    navigate(`./create-question/`, {state: { testName: testInfo.testName, numQuestions: testInfo.numQuestions}});
   };
 
   const handleReset = () => {
@@ -38,7 +36,7 @@ const QuizBuilder = ({setActivePage}) => {
 
   return (
     <div className="m-8">
-      <h1 className="text-3xl font-semibold mb-4">Tạo bài kiểm tra</h1>
+      <h1 className="text-3xl font-semibold mb-4">Quiz Builder - Tạo bài kiểm tra</h1>
       <hr className="my-4" />
       
       <form>
