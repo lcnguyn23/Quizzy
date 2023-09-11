@@ -39,8 +39,8 @@ const Sidebar = () => {
           <div className='flex justify-center'>
             <hr className="mt-72 w-4/5 border-gray-600" />
           </div>
-          <div className="bottom-0 left-0 p-4 flex items-center">
-            <p className="px-5 py-1 mb-4 text-textlight">Jame Smith</p>
+          <div className="bottom-0 left-0 p-4 flex items-center justify-around">
+            <p className="py-1 mb-4 text-textlight">Jame Smith</p>
             <HiArrowRightOnRectangle style={{marginBottom: "15px"}}/>
           </div>
         </div>

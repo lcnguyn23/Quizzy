@@ -27,7 +27,7 @@ const QuizBuilder = ({setActivePage}) => {
     // Redirect to the question creation page
     
     
-    navigate(`/Quizzy/quiz-builder/create-question/`, {state: { testName: testInfo.testName, numQuestions: testInfo.numQuestions}});
+    navigate(`./create-question/`, {state: { testName: testInfo.testName, numQuestions: testInfo.numQuestions}});
   };
 
   const handleReset = () => {

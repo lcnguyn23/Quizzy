@@ -16,10 +16,10 @@ const App = () => {
           <Navigate>
             <Route path="/" element={Home } />
             <Route path="/home" element={Home} />
-            <Route path="/Quizzy/quiz-builder" element={QuizBuilder} />
-            <Route path="/Quizzy/create-question" element={CreateQuestion} />
-            <Route path="/Quizzy/my-quiz" element={MyQuiz} />
-            <Route path="/Quizzy/my-quiz/quiz-detail/:quizId" element={QuizDetail} />
+            <Route path="/quiz-builder" element={QuizBuilder} />
+            <Route path="/create-question" element={CreateQuestion} />
+            <Route path="/my-quiz" element={MyQuiz} />
+            <Route path="/my-quiz/quiz-detail/:quizId" element={QuizDetail} />
             <Route
                 path="*"
                 element={<Navigate to="/home" replace />}
