@@ -9,12 +9,13 @@ import QuizDetail from './QuizDetail';
 import Home from './Home';
 
 const App = () => {
+  const basename = "/Quizzy";
   return (
-    <Router>
+    <Router basename={basename}>
       <div>
         <Sidebar>
           <Navigate>
-            <Route path="/" element={Home } />
+            <Route path="/" exact element={Home } />
             <Route path="/home" element={Home} />
             <Route path="/quiz-builder" element={QuizBuilder} />
             <Route path="/create-question" element={CreateQuestion} />
