@@ -26,7 +26,7 @@ const MyQuiz = () => {
       <ul className="list-disc pl-4">
         {quizzes.map((quiz) => (
           <li key={quiz.id} className="mb-4">
-            <Link to={`/my-quiz/quiz-detail/${quiz.id}`} className="text-textdark hover:underline">
+            <Link to={`/Quizzy/my-quiz/quiz-detail/${quiz.id}`} className="text-textdark hover:underline">
               <span className="font-semibold">{quiz.testName}</span> ({quiz.numQuestions} câu hỏi) - Ngày tạo: {quiz.createdAt}
             </Link>
           </li>

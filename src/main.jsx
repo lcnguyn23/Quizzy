@@ -21,23 +21,23 @@ const router = createBrowserRouter([
     redirect: <Home />,
     children: [
       {
-        path: "/",
+        path: "/Quizzy/home",
         element: <Home />,
       },
       {
-        path: "/quiz-builder",
+        path: "/Quizzy/quiz-builder",
         element: <QuizBuilder />,
       },
       {
-        path: "/quiz-builder/create-question",
+        path: "/Quizzy/quiz-builder/create-question",
         element: <CreateQuestion />,
       },
       {
-        path: "/my-quiz",
+        path: "/Quizzy/my-quiz",
         element: <MyQuiz/>
       },
       {
-        path: "/my-quiz/quiz-detail/:quizId",
+        path: "/Quizzy/my-quiz/quiz-detail/:quizId",
         element: <QuizDetail/>
       }
     ],
